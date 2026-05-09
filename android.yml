@@ -12,11 +12,29 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Make gradlew executable
-        run: chmod +x gradlew
+      - name: Create project structure
+        run: |
+          mkdir -p app/src/main/java/com/splitscreen
+          mkdir -p app/src/main/res/layout
+          mkdir -p app/src/main/res/values
+          mkdir -p app/src/main/res/drawable
+          mkdir -p app/src/main/res/mipmap-hdpi
+          mkdir -p app/src/main/res/xml
+          cp MainActivity.java app/src/main/java/com/splitscreen/
+          cp AndroidManifest.xml app/src/main/
+          cp activity_main.xml app/src/main/res/layout/
+          cp dialog_app_picker.xml app/src/main/res/layout/
+          cp item_app.xml app/src/main/res/layout/
+          cp strings.xml app/src/main/res/values/
+          cp themes.xml app/src/main/res/values/
+          cp btn_icon.xml btn_outline_red.xml btn_outline_cyan.xml label_bg_red.xml label_bg_cyan.xml input_bg.xml ic_launcher_background.xml app/src/main/res/drawable/
+          cp ic_launcher.xml app/src/main/res/mipmap-hdpi/
+          cp network_security_config.xml app/src/main/res/xml/
+          cp build.gradle app/
+          chmod +x gradlew
       - name: Build Debug APK
-        run: ./gradlew assembleDebug -p splitx
+        run: ./gradlew assembleDebug
       - uses: actions/upload-artifact@v4
         with:
           name: SplitX-APK
-          path: splitx/app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
