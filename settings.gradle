@@ -1,2 +1,3 @@
 rootProject.name = "SplitScreen"
 include ':app'
+project(':app').projectDir = new File('app')
