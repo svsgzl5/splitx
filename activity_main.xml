@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0a0a0f">
+
+    <!-- PANEL A -->
+    <LinearLayout
+        android:id="@+id/panelA"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Toolbar A -->
+        <LinearLayout
+            android:id="@+id/toolbarA"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#12121a"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/labelA"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="A"
+                android:textColor="#ffffff"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/label_bg_red"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/urlInputA"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/input_bg"
+                android:textColor="#e8e8f0"
+                android:textColorHint="#5a5a7a"
+                android:hint="URL veya arama..."
+                android:textSize="11sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:inputType="textUri"
+                android:imeOptions="actionGo"
+                android:text="https://chatgpt.com"/>
+
+            <Button
+                android:id="@+id/btnGoA"
+                android:layout_width="44dp"
+                android:layout_height="30dp"
+                android:text="Git"
+                android:textSize="10sp"
+                android:textColor="#ff3c5f"
+                android:background="@drawable/btn_outline_red"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnReloadA"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="↺"
+                android:textSize="14sp"
+                android:textColor="#5a5a7a"
+                android:background="@drawable/btn_icon"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPickA"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="⊞"
+                android:textSize="14sp"
+                android:textColor="#00e5ff"
+                android:background="@drawable/btn_icon"/>
+
+        </LinearLayout>
+
+        <!-- WebView A -->
+        <WebView
+            android:id="@+id/webViewA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <!-- DIVIDER (draggable) -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#ff3c5f"/>
+
+    <!-- PANEL B -->
+    <LinearLayout
+        android:id="@+id/panelB"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Toolbar B -->
+        <LinearLayout
+            android:id="@+id/toolbarB"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#12121a"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/labelB"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="B"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:background="@drawable/label_bg_cyan"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/urlInputB"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/input_bg"
+                android:textColor="#e8e8f0"
+                android:textColorHint="#5a5a7a"
+                android:hint="URL veya arama..."
+                android:textSize="11sp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:singleLine="true"
+                android:inputType="textUri"
+                android:imeOptions="actionGo"
+                android:text="https://youtube.com"/>
+
+            <Button
+                android:id="@+id/btnGoB"
+                android:layout_width="44dp"
+                android:layout_height="30dp"
+                android:text="Git"
+                android:textSize="10sp"
+                android:textColor="#00e5ff"
+                android:background="@drawable/btn_outline_cyan"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnReloadB"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="↺"
+                android:textSize="14sp"
+                android:textColor="#5a5a7a"
+                android:background="@drawable/btn_icon"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnPickB"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="⊞"
+                android:textSize="14sp"
+                android:textColor="#ff3c5f"
+                android:background="@drawable/btn_icon"/>
+
+        </LinearLayout>
+
+        <!-- WebView B -->
+        <WebView
+            android:id="@+id/webViewB"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
